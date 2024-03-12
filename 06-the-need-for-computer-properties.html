@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS Form</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>{{reversedMessage}}</h1>
+
+      <h2>All tasks</h2>
+      <ul>
+        <li v-for="task in tasks">
+          {{task.description }}<input
+            type="checkbox"
+            v-model="task.completed"
+          />
+        </li>
+      </ul>
+
+      <h2>Complete Tasks</h2>
+      <ul>
+        <li v-for="task in tasks" v-if="task.completed">
+          {{task.description }}
+        </li>
+      </ul>
+
+      <h2>Incomplete Tasks</h2>
+      <ul>
+        <li v-for="task in incompleteTasks">{{task.description }}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: {
+          message: "hello world",
+          tasks: [
+            { description: "Go to the store", completed: true },
+            { description: "make food", completed: false },
+            { description: "clean toilet", completed: false },
+            { description: "brush teeth", completed: true },
+          ],
+        },
+        mounted() {
+          console.log(new Date());
+        },
+        methods: {},
+        computed: {
+          reversedMessage() {
+            return this.message.split("").reverse().join("");
+          },
+          incompleteTasks() {
+            return this.tasks.filter((task) => !task.completed);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

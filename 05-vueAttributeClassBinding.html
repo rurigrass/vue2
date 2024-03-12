@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS Attribute Class Binding</title>
+    <style>
+      .color-red {
+        color: red;
+      }
+      .is-loading {
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <button
+        :title="title"
+        @hover="hoverButton"
+        :class="{'is-loading': isLoading}"
+        @click="toggleClass"
+      >
+        Unlock Button
+      </button>
+      <button :disabled="isDisabled" @click="yay">Click Me</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: {
+          title: "This is the title",
+          className: "color-red",
+          isLoading: false,
+          isDisabled: true,
+        },
+        mounted() {
+          console.log("hello");
+        },
+        methods: {
+          hoverButton() {
+            console.log("HOVERIRNG");
+          },
+          toggleClass() {
+            this.isLoading = !this.isLoading;
+            this.isDisabled = !this.isDisabled;
+          },
+          yay() {
+            alert("YAY YOU DID IT!");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
