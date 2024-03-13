@@ -12,26 +12,39 @@
 
       .container {
         height: 100dvh;
-        display: relative;
-      }
-
-      .modal {
-        display: absolute;
-        bottom: 100px;
       }
 
       .modal-background {
-        height: 100%;
-        width: 100%;
-        background-color: gray;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
       }
 
-      .modal-content {
-        display: absolute;
+      .close-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
 
-        /* display: flex;
+      .close-button:hover {
+        color: gray;
+        cursor: pointer;
+      }
+
+      .modal-container {
+        height: 100%;
+        display: flex;
         justify-content: center;
-        align-items: center; */
+        align-items: center;
+      }
+
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .box {
@@ -43,21 +56,24 @@
   </head>
   <body>
     <div id="root" class="container">
-      <modal></modal>
+      <modal v-show="showModal" @close="showModal = false"
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        perspiciatis asperiores.</modal
+      >
+      <button @click="showModal = true">Show modal</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="./main.js"></script>
 
     <script>
       const app = new Vue({
         el: "#root",
-        data: {},
+        data: { showModal: false },
         mounted() {
           console.log("hi");
         },
-        methods: {},
       });
     </script>
-    <script src="./main.js"></script>
   </body>
 </html>
