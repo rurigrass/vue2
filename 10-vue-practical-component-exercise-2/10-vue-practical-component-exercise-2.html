@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      .container {
+        height: 100dvh;
+        display: relative;
+      }
+
+      .modal {
+        display: absolute;
+        bottom: 100px;
+      }
+
+      .modal-background {
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+      }
+
+      .modal-content {
+        display: absolute;
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      .box {
+        background-color: gainsboro;
+        padding: 15px;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <modal></modal>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: {},
+        mounted() {
+          console.log("hi");
+        },
+        methods: {},
+      });
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
