@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+
+    <style type="text/css">
+      body {
+        padding-top: 48px;
+      }
+
+      .message {
+        margin-bottom: 10px;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      .message-header {
+        background-color: rgb(77, 66, 87);
+        color: white;
+        padding: 6px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .close:hover {
+        cursor: pointer;
+        color: gray;
+      }
+
+      .message-body {
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <message
+        title="Hello World"
+        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, atque!"
+      ></message>
+      <message
+        title="Hello UNIVERSE"
+        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, atque!"
+      ></message>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: {},
+        mounted() {
+          console.log("hi");
+        },
+        methods: {},
+      });
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
