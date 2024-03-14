@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <coupon @applied="onCouponApplied"></coupon>
+      <h1 v-if="couponApplied">You used a coupon</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="./main.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: {
+          couponApplied: false,
+        },
+        mounted() {
+          console.log("hi");
+        },
+        methods: {
+          onCouponApplied() {
+            this.couponApplied = true;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
