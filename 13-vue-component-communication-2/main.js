@@ -1,15 +1,23 @@
+window.Event = new Vue();
+
 Vue.component("coupon", {
   template: `
-  <div>hello</div>
+  <input type="text" @blur="onBlur"></input>
   `,
 
   data() {
     return {};
   },
 
-  methods: {},
+  methods: {
+    onBlur() {
+      Event.$emit("applied");
+    },
+  },
 
-  created() {},
+  created() {
+    Event.$on("applied", () => console.log("Handling it"));
+  },
 
   mounted() {},
 });

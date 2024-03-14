@@ -17,7 +17,10 @@
     </style>
   </head>
   <body>
-    <div id="root" class="container"></div>
+    <div id="root" class="container">
+      <coupon @applied="couponSubmit"></coupon>
+      <h1 v-show="couponApplied">Coupon Applied!</h1>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
     <script src="./main.js"></script>
@@ -31,7 +34,11 @@
         mounted() {
           console.log("hi");
         },
-        methods: {},
+        methods: {
+          couponSubmit() {
+            this.couponApplied = true;
+          },
+        },
       });
     </script>
   </body>

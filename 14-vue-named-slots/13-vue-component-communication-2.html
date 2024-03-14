@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      .container {
+        height: 100dvh;
+      }
+
+      .modal-background {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .close-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+
+      .close-button:hover {
+        color: gray;
+        cursor: pointer;
+      }
+
+      .modal-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        background-color: gainsboro;
+        padding: 15px;
+        border-radius: 15px;
+      }
+
+      .title {
+        border-bottom: 2px solid black;
+        padding: 10px 0px;
+      }
+
+      .content {
+        border-bottom: 2px solid black;
+        padding: 10px 0px;
+      }
+
+      .footer {
+        padding: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <modal v-show="showModal" @close="showModal = false">
+        <template slot="title">TITLE</template>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        perspiciatis asperiores.
+        <template slot="footer">
+          <a>Okay</a>
+          <!-- <a>Cancel</a> -->
+        </template>
+      </modal>
+      <button @click="showModal = true">Show modal</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="./main.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#root",
+        data: { showModal: false },
+        mounted() {
+          console.log("hi");
+        },
+      });
+    </script>
+  </body>
+</html>
