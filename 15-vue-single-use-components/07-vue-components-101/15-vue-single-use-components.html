@@ -18,22 +18,25 @@
   <body>
     <div id="root">
       <progress-view inline-template>
-        <h1>Your progress through this course {{completionRate}}%</h1>
+        <div>
+          <h1>Your progress through this course {{completionRate}}%</h1>
+          <p><button @click="completionRate += 10">Load</button></p>
+        </div>
       </progress-view>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-
+    <!-- 
     <script>
-      // const app = new Vue({
-      //   el: "#root",
-      //   data: {},
-      //   mounted() {
-      //     console.log("hi");
-      //   },
-      //   methods: {},
-      // });
-    </script>
+      const app = new Vue({
+        el: "#root",
+        data: {},
+        mounted() {
+          console.log("hi");
+        },
+        methods: {},
+      });
+    </script> -->
 
     <script src="./main.js"></script>
   </body>
