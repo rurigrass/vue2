@@ -7,6 +7,7 @@
 
 <script>
 import Message from "./components/Message.vue";
+alert("hello world");
 export default {
   components: {
     Message,
