@@ -1,5 +1,5 @@
 {
-  "name": "18-vue-laravel",
+  "name": "18-vue-sass",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue2": "^2.3.1",
-    "laravel-mix": "^6.0.49",
     "vue": "2.7.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
     "vite": "^5.1.6"
   }
 }

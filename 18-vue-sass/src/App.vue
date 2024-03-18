@@ -7,7 +7,7 @@
 
 <script>
 import Message from "./components/Message.vue";
-alert("hello world");
+
 export default {
   components: {
     Message,
@@ -21,7 +21,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
+  color: black;
   margin-top: 60px;
 }
 </style>
