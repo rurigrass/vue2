@@ -1,27 +1,28 @@
 <template>
   <div id="app">
-    <Message msg="Hello There"> content </Message>
-    <Message msg="Hello There"> content </Message>
+    <Header></Header>
+    <div class="container">
+      <Title class="container__title" msg="Cascade" />
+      <ImageContainer class="container__image" />
+    </div>
+    <Overlap />
   </div>
 </template>
 
 <script>
-import Message from "./components/Message.vue";
+import Title from "./components/Title.vue";
+import Header from "./components/Header.vue";
+import ImageContainer from "./components/ImageContainer.vue";
+import Overlap from "./components/Overlap.vue";
 
 export default {
   components: {
-    Message,
+    Title,
+    Header,
+    ImageContainer,
+    Overlap,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: black;
-  margin-top: 60px;
-}
-</style>
+<style></style>

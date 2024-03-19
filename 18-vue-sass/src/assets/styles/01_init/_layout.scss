@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(calc(50dvh - 30px), auto);
+  gap: 5px;
+  padding: 0px 5px;
+
+  div {
+    grid-row: 1/2;
+  }
+
+  &__title {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+  }
+
+  &__image {
+    grid-column: 3/-1;
+  }
+}

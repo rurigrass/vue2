@@ -1,2 +1,6 @@
 //BASE
-@import "_global.scss";
+@import "01_init/_global";
+@import "01_init/layout";
+
+//COMPONENTS
+@import "02_components/_header";
