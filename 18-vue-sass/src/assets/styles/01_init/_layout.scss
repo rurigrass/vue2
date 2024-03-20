@@ -10,14 +10,20 @@
   }
 
   &__title {
-    grid-column: 1/4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 100px;
     z-index: 30;
   }
 
-  &__image {
+  &__center {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    grid-column: 1/4;
+  }
+
+  &__right {
     grid-column: 3/-1;
   }
 }
