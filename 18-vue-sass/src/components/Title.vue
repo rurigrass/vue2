@@ -7,6 +7,8 @@
   </div>
 </template>
 
+<!-- change to inverted text component -->
+
 <script>
 export default {
   data() {
