@@ -1,0 +1,17 @@
+.c-inverted-text {
+    h1 {
+        font-size: 100px;
+      }
+      
+      .underlap {
+        position: relative;
+        color: black;
+        clip-path: polygon(0 0, var(--size) 0, var(--size) 100%, 0% 100%);
+        z-index: 1;
+      }
+      
+      .overlap {
+        position: absolute;
+        color: white;
+      }
+}

@@ -4,9 +4,8 @@
     <div class="container">
       <InvertedText
         class="container__left container__center container__title"
-        msg="Cascade"
         :text-fill="innerWidth / 3 - 102"
-      />
+      >Cascade</InvertedText>
       <ImageContainer class="container__right" />
     </div>
     <div class="container">
