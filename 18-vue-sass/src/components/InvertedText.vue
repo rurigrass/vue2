@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 :style="{ '--size': innerWidth + 'px' }" class="underlap">
+    <h1 :style="{ '--size': textFill + 'px' }" class="underlap">
       {{ msg }}
     </h1>
     <h1 class="overlap">{{ msg }}</h1>
@@ -11,28 +11,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      innerWidth: window.innerWidth / 3 - 102,
-    };
-  },
-
   props: {
     msg: String,
-  },
-
-  methods: {
-    resizeHandler(e) {
-      this.innerWidth = window.innerWidth / 3 - 102;
-    },
-  },
-
-  created() {
-    window.addEventListener("resize", this.resizeHandler);
-  },
-
-  destroyed() {
-    window.removeEventListener("resize", this.resizeHandler);
+    textFill: Number
   },
 };
 </script>
