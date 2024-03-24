@@ -1,9 +1,9 @@
 <template>
   <div class="c-inverted-text">
-    <div :style="{ '--size': textFill + 'px' }" class="underlap">
+    <div :style="{ '--size': textFill + 'px' }" class="c-inverted-text__underlap">
       <slot></slot>
     </div>
-    <div class="overlap"><slot></slot></div>
+    <div class="c-inverted-text__overlap"><slot></slot></div>
   </div>
 </template>
 

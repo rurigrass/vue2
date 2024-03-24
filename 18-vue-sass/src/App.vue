@@ -6,7 +6,7 @@
         class="container__left container__center container__title text__lg"
         :text-fill="innerWidth / 3 - 102"
       >Cascade</InvertedText>
-      <ImageContainer class="container__right" />
+      <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg"/>
     </div>
     <div :style="{padding: '20px'}"></div>
     <div class="container">

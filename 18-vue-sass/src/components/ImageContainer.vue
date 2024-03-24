@@ -2,14 +2,26 @@
   <div>
     <img
       class="image image-cover"
-      src="../assets/dmitriy-galanov-UKGk5f1d8_0-unsplash.jpg"
+      :src="this.link"
       alt=""
     />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    link: String
+  },
+  methods: {
+    log(e) {
+      console.log(e);
+    }
+  },
+  mounted() {
+    this.log(this.link); // Call the log method when the component is mounted
+  }
+};
 </script>
 
 <style scoped>
