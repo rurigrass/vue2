@@ -1,20 +1,32 @@
 .c-header {
-  height: 40px;
+  // height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: right;
 
+  :hover {
+    cursor: pointer;
+
+    background-color: black;
+
+    div {
+      background-color: white;
+    }
+  }
+
   &__burger {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin: 10px;
+    padding: 12px 10px;
+
 
     div {
       height: 2px;
       width: 20px;
       background-color: black;
     }
+
   }
 }
