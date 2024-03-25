@@ -1,9 +1,9 @@
 <template>
-  <div class="c-inverted-text">
-    <div :style="{ '--size': textFill + 'px' }" class="c-inverted-text__underlap">
+  <div class="c-inverted-text" >
+    <div :style="{ '--size': textFill + 'px'}" class="c-inverted-text__underlap">
       <slot></slot>
+      <div :class="['c-inverted-text__overlap' , 'c-inverted-text' + fill]"><slot></slot></div>
     </div>
-    <div class="c-inverted-text__overlap"><slot></slot></div>
   </div>
 </template>
 
@@ -12,7 +12,8 @@
 <script>
 export default {
   props: {
-    textFill: Number
+    textFill: Number,
+    fill: String
   },
 };
 </script>

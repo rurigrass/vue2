@@ -1,13 +1,25 @@
-.c-inverted-text {    
-      &__underlap {
-        position: relative;
-        color: black;
-        clip-path: polygon(0 0, var(--size) 0, var(--size) 100%, 0% 100%);
-        z-index: 1;
-      }
-      
-      &__overlap {
-        position: absolute;
-        color: white;
-      }
+.c-inverted-text {
+
+
+  &__underlap {
+    position: relative;
+    color: black;
+    // clip-path: polygon(0 0, var(--size) 0, var(--size) 100%, 0% 100%);
+  }
+
+  &__overlap {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+  }
+
+  &__black-left {
+    clip-path: polygon(var(--size) 0, 100% 0, 100% 100%, var(--size) 100%);
+    z-index: 1;
+  }
+  &__white-left {
+    clip-path: polygon(0 0, var(--size) 0, var(--size) 100%, 0% 100%);
+    z-index: 1;
+  }
 }

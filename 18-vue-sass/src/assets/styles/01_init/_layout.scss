@@ -9,9 +9,12 @@
     grid-row: 1/2;
   }
 
-  &__title {
+  &__ml {
     margin-left: 100px;
-    z-index: 30;
+  }
+
+  &__mt {
+    margin-top: 100px;
   }
 
   &__center {
