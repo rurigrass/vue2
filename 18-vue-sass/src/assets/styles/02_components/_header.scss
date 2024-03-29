@@ -35,7 +35,12 @@
     // transform: rotateY(180deg);
     .line {
       background-color: white;
-
+      .line-1 {
+        transform: translateY(1px);
+      }
+      .line-3 {
+        transform: translateY(-1px);
+      }
       &.line-4 {background-color: black}
       &.line-5 {background-color: black}
     }
