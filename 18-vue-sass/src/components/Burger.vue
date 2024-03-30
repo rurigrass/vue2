@@ -1,5 +1,5 @@
 <template>
-        <div>
+    <div class="burger" :class="{ 'burger__checked': $store.state.menuOpen }" @click="$store.commit('toggleMenu')">
           <div class="burger__side burger__side--front">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
@@ -14,13 +14,7 @@
 
 <script>
 export default {
-    // data() {
-    //   return {checked: false} 
-    // },
-    // props: {
-    //   check: Boolean
-    // }
-    //add store
+
 };
 </script>
 
