@@ -12,7 +12,6 @@ export const store = new Vuex.Store({
   mutations: {
     toggleMenu(state) {
       state.menuOpen = !state.menuOpen;
-    // console.log(state);
     },
   },
 
