@@ -1,5 +1,11 @@
 .c-inverted-text {
 
+  // overflow-wrap: break-word;
+  width: auto;
+  // word-wrap: break-word;
+  // hyphens: auto;
+
+  // text-wrap: wrap;
 
   &__underlap {
     position: relative;

@@ -1,11 +1,9 @@
 <template>
-    <transition name="fade">
-        <div class="c-menu">
-            <p>Home</p>
-            <p>About</p>
-            <p>Contact</p>
+    <div class="c-background">
+        <div v-for="col in Math.floor(screenWidth / 40)">
+            {{ col }}
         </div>
-    </transition>
+    </div>
 </template>
 
 <script>

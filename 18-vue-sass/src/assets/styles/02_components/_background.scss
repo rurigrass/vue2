@@ -1,0 +1,16 @@
+.c-background {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  background-color: orange;
+
+  width: 100%;
+
+  div {
+    width: 40px;
+  }
+}

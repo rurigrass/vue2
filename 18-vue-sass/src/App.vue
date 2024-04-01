@@ -1,12 +1,14 @@
 <template>
   <div id="app">
+    <Background :screenWidth="innerWidth"></Background>
     <Header></Header>
+    <Menu v-show="$store.state.menuOpen" :screenWidth="innerWidth"></Menu>
     <div class="container">
       <InvertedText
         class="container__left container__center container__ml text__lg"
         :text-fill="innerWidth / 3 - 102"
         fill="__black-left"
-      >Cascade</InvertedText>
+      >Cascadefdsafdsdfddsafsd</InvertedText>
       <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg"/>
     </div>
     <div :style="{padding: '20px'}"></div>
@@ -28,10 +30,14 @@
 import Header from "./components/Header.vue";
 import ImageContainer from "./components/ImageContainer.vue";
 import InvertedText from "./components/InvertedText.vue";
+import Menu from "./components/Menu.vue";
+import Background from "./components/Background.vue";
 
 export default {
   components: {
     Header,
+    Menu,
+    Background,
     InvertedText,
     ImageContainer,
   },

@@ -18,9 +18,9 @@ export default {
       console.log(e);
     }
   },
-  mounted() {
-    this.log(this.link); // Call the log method when the component is mounted
-  }
+  // mounted() {
+  //   this.log(this.link); // Call the log method when the component is mounted
+  // }
 };
 </script>
 
