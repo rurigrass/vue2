@@ -7,10 +7,15 @@
   z-index: 2;
   pointer-events: none;
   background-color: orange;
-
   width: 100%;
+
 
   div {
     width: 40px;
+  }
+
+  div:last-child {
+    width: calc(40 * var(--last-width)) ;
+    background-color: yellow;
   }
 }
