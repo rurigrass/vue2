@@ -1,16 +1,15 @@
 .c-inverted-text {
 
-  // overflow-wrap: break-word;
-  width: auto;
-  // word-wrap: break-word;
-  // hyphens: auto;
-
-  // text-wrap: wrap;
 
   &__underlap {
     position: relative;
     color: black;
     // clip-path: polygon(0 0, var(--size) 0, var(--size) 100%, 0% 100%);
+    // width: calc(100vw - 100px);
+    // width: inherit;
+    // overflow-wrap: break-word;
+
+   
   }
 
   &__overlap {
@@ -18,6 +17,10 @@
     color: white;
     top: 0;
     left: 0;
+
+    // width: calc(100vw - 100px);   
+    // width: inherit;
+    //  overflow-wrap: break-word;
   }
 
   &__black-left {

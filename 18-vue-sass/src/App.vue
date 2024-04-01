@@ -8,7 +8,7 @@
         class="container__left container__center container__ml text__lg"
         :text-fill="innerWidth / 3 - 102"
         fill="__black-left"
-      >Cascadefdsafdsdfddsafsd</InvertedText>
+      >Cascade</InvertedText>
       <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg"/>
     </div>
     <div :style="{padding: '20px'}"></div>

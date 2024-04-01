@@ -1,10 +1,10 @@
 <template>
-  <div class="c-inverted-text" >
-    <div :style="{ '--size': textFill + 'px'}" class="c-inverted-text__underlap">
-      <slot></slot>
-      <div :class="['c-inverted-text__overlap' , 'c-inverted-text' + fill]"><slot></slot></div>
+    <div class="c-inverted-text" >
+      <div :style="{ '--size': textFill + 'px'}" class="c-inverted-text__underlap">
+        <slot></slot>
+        <div :class="['c-inverted-text__overlap' , 'c-inverted-text' + fill]"><slot></slot></div>
+      </div>
     </div>
-  </div>
 </template>
 
 <!-- change to inverted text component -->
