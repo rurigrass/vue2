@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <Background :screenWidth="innerWidth"></Background>
+    <Background :screenWidth="innerWidth" :dimensions="dimensions"></Background>
     <Header></Header>
     <Menu v-show="$store.state.menuOpen" :screenWidth="innerWidth"></Menu>
     <div class="container">
       <InvertedText
         class="container__left container__center container__ml text__lg"
         :text-fill="innerWidth / 3 - 102"
+        :extra="innerWidth"
         fill="__black-left"
       >Cascade</InvertedText>
       <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg"/>
@@ -26,7 +27,7 @@
   </div>
 </template>
 
-<script>
+<script> 
 import Header from "./components/Header.vue";
 import ImageContainer from "./components/ImageContainer.vue";
 import InvertedText from "./components/InvertedText.vue";
@@ -44,6 +45,10 @@ export default {
 
   data() {
     return {
+      dimensions: {
+        width: window.innerWidth,
+        height: window.innerHeight
+      },
       innerWidth: window.innerWidth,
     };
   },
@@ -51,6 +56,12 @@ export default {
   methods: {
     resizeHandler(e) {
       window.innerWidth >= 1280 ? this.innerWidth = 1280 : this.innerWidth = window.innerWidth
+
+
+      
+      // window.innerWidth >= 1280 ? this.dimensions.width
+      //  = 1280 : this.dimensions.width = window.innerWidth
+      // this.dimensions.height = window.innerHeight
     },
   },
 

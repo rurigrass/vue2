@@ -9,13 +9,15 @@
   background-color: orange;
   width: 100%;
 
+  color: black;
+
 
   div {
     width: 40px;
   }
 
   div:last-child {
-    width: calc(40 * var(--last-width)) ;
+    width: var(--last-width);
     background-color: yellow;
   }
 }

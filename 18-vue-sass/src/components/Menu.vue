@@ -13,9 +13,10 @@ export default {
     props: {
         screenWidth: Number
     },
-    mounted() {
-        console.log(this.screenWidth / 40);
-    }
+    mounted() {"doees this even work? ", this.screenWidth},
+    updated() {
+    console.log("WIDEWIDEEE ", this.screenWidth);
+  },
 }
 </script>
 

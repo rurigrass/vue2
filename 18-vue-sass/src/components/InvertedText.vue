@@ -13,8 +13,9 @@
 export default {
   props: {
     textFill: Number,
-    fill: String
+    fill: String,
   },
+
 };
 </script>
 
