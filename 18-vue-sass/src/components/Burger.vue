@@ -1,5 +1,4 @@
 <template>
-  <div class="burger-container">
     <div class="burger" :class="{ 'burger__checked': $store.state.menuOpen }" @click="$store.commit('toggleMenu')">
       <div class="burger__side burger__side--front">
         <div class="line line-1"></div>
@@ -11,7 +10,6 @@
         <div class="line line-5"></div>
       </div>
     </div>
-  </div>
   </template>
 
 <script>

@@ -1,6 +1,8 @@
 .c-header {
   max-width: 1280px;
   position: relative;
+  display: flex;
+  justify-content: right;
   
 
   &__bar {
@@ -11,16 +13,6 @@
     position: fixed;
     top: 0;
   }
-}
-
-.burger-container {
-  width: 100%;
-  max-width: 1280px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: right;
 }
 
 .burger {
