@@ -56,8 +56,6 @@ export default {
   methods: {
     resizeHandler(e) {
       window.innerWidth >= 1280 ? this.innerWidth = 1280 : this.innerWidth = window.innerWidth
-
-
       
       // window.innerWidth >= 1280 ? this.dimensions.width
       //  = 1280 : this.dimensions.width = window.innerWidth

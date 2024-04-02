@@ -1,7 +1,7 @@
 <template>
     <div class="c-background">
-        <div v-for="col in Math.ceil(screenWidth / 40)" :style="{ '--last-width': lastWidth + 'px' }">
-            {{ col }}
+        <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" :style="{ '--last-width': i === Math.ceil(screenWidth / 40) - 1 ? lastWidth + 'px' : '40px' }">
+            <div v-for="(row, i) in getRows" :key="i">{{ row }}</div>
         </div>
     </div>
 </template>
@@ -18,24 +18,17 @@ export default {
             const remainder = (this.screenWidth / 40) % 1 * 40
             remainder === 0 ? value = 40 : value = remainder
             return value
-        }
+        },
+        getRows() {
+            const blockSize = 40
+            const amountOfBlocks = Math.ceil(this.dimensions.height / blockSize)
+            console.log("get them aall");
+            console.log(amountOfBlocks);
+            return amountOfBlocks
+        },
+       
     },
-    // mounted() {
-    //     //do the screen.width thing. likee when it reaches limit = 1240 or whaatevr
-    //     // console.log(Math.ceil(this.screenWidth / 40));
-    //     // console.log("width of the screen ", this.screenWidth);
-    //     // console.log("last ", (this.screenWidth / 40) % 1 );
-    //     // console.log("last * 40 ", (this.screenWidth / 40) % 1 * 40);
-    //     // console.log("dimensions " + this.dimensions);
-    //     this.getBlocks()
-    // },
-    // methods: {
-    //     getBlocks() {
-    //         const blockSize = 40
-    //         // const amountOfBlocks = 
-    //         console.log("get them aall");
-    //     }
-    // }
+  
 }
 </script>
 
