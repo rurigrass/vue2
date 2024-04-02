@@ -1,7 +1,9 @@
 <template>
   <div class="c-header">
-    <Burger />
+    <div class="c-header__bar">
     </div>
+    <Burger />
+  </div>
 </template>
 
 <script>

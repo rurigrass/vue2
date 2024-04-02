@@ -1,20 +1,33 @@
 .c-header {
-  height: 5px;
-  width: 100%;
-  position: fixed;
   max-width: 1280px;
-  background-color: white;
+  position: relative;
+  
+
+  &__bar {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    max-width: inherit; /* Inherit max-width from parent */
+    position: fixed;
+    top: 0;
+  }
+}
+
+.burger-container {
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: right;
 }
 
 .burger {
-  height: 100%;
+  position: fixed;
   height: 40px;
   width: 40px;
-  position: relative;
-  z-index: 5;
-
+  z-index: 10;
 
   transition: all 0.8s cubic-bezier(0.05, 0.92, 0.58, 1);
   //look this up
@@ -45,8 +58,12 @@
       .line-3 {
         transform: translateY(-1px);
       }
-      &.line-4 {background-color: black}
-      &.line-5 {background-color: black}
+      &.line-4 {
+        background-color: black;
+      }
+      &.line-5 {
+        background-color: black;
+      }
     }
   }
 
@@ -65,7 +82,6 @@
     &--front {
       color: black;
       background-color: #f9f9f9;
-      
     }
     &--back {
       color: #f9f9f9;
@@ -94,9 +110,7 @@
       transform: rotateY(180);
       transition: all 0.8s cubic-bezier(0.05, 0.92, 0.58, 1);
     }
-   
   }
-
 }
 
 .line {
@@ -116,6 +130,12 @@
     top: 65.5%;
   }
 
-  &.line-4 {rotate: 45deg; background-color: white}
-  &.line-5 {rotate: -45deg; background-color: white}
+  &.line-4 {
+    rotate: 45deg;
+    background-color: white;
+  }
+  &.line-5 {
+    rotate: -45deg;
+    background-color: white;
+  }
 }
