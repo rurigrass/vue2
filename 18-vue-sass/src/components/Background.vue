@@ -1,9 +1,12 @@
 <template>
-    <div class="c-background">
-        <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column":style="{ '--last-width': lastWidth + 'px' }">
-            <div v-for="(row, i) in getRows" :key="i" class="c-background__row">{{ row }}</div>
+    <transition name="fade">
+        <div class="c-background">
+            <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column"
+                :style="{ '--last-width': lastWidth + 'px' }">
+                <div v-for="(row, i) in getRows" :key="i" class="c-background__row">{{ row }}</div>
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -26,9 +29,9 @@ export default {
             console.log(amountOfBlocks);
             return amountOfBlocks
         },
-       
+
     },
-  
+
 }
 </script>
 

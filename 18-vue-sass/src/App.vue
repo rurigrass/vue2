@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Background :screenWidth="innerWidth" :dimensions="dimensions"></Background>
+    <Background v-show="$store.state.menuOpen" :screenWidth="innerWidth" :dimensions="dimensions"></Background>
     <Header></Header>
-    <Menu v-show="$store.state.menuOpen" :screenWidth="innerWidth"></Menu>
+    <Menu v-show="$store.state.menuOpen"></Menu>
     <div class="container">
       <InvertedText
         class="container__left container__center container__ml text__lg"
