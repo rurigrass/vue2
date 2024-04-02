@@ -12,14 +12,18 @@
   color: black;
 
 
-  div {
+  &__column {
     width: 40px;
-    height: 40px;
+    // height: 40px;
     
   }
 
-  div:last-child {
+  &__column:last-child {
     width: var(--last-width);
     background-color: yellow;
+  }
+
+  &__row {
+    height: 40px;
   }
 }
