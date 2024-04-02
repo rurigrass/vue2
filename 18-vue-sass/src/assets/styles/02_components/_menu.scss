@@ -11,7 +11,13 @@
 
   p {
     font-size: 5vw;
-    margin: 5px;
+    margin: 5px; 
+    cursor: pointer;
+    transition: color 0.3s; // Add transition effect
+
+    &:hover {
+      color: yellow; // Change text color to yellow on hover
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Background v-show="$store.state.menuOpen" :screenWidth="innerWidth" :dimensions="dimensions"></Background>
     <Header></Header>
+    <Background v-show="$store.state.menuOpen" :screenWidth="innerWidth" :dimensions="dimensions"></Background>
     <Menu v-show="$store.state.menuOpen"></Menu>
     <div class="container">
       <InvertedText
@@ -55,7 +55,9 @@ export default {
 
   methods: {
     resizeHandler(e) {
-      window.innerWidth >= 1280 ? this.innerWidth = 1280 : this.innerWidth = window.innerWidth
+      // window.innerWidth >= 1280 ? this.innerWidth = 1280 : this.innerWidth = window.innerWidth
+      this.innerWidth = Math.min(window.innerWidth, 1280);
+
       
       // window.innerWidth >= 1280 ? this.dimensions.width
       //  = 1280 : this.dimensions.width = window.innerWidth
