@@ -14,15 +14,21 @@
   &__column {
     width: 40px;
     // height: 40px;
-  }
-
-  &__column:last-child {
-    width: var(--last-width);
-    background-color: yellow;
+    &:last-child {
+      width: var(--last-width);
+      background-color: yellow;
+    }
   }
 
   &__row {
     height: 40px;
+    &:nth-child(odd) {
+      background-color: purple;
+    }
+
+  }
+  
+  &__block {
+    // background-color: green;
   }
 }
-
