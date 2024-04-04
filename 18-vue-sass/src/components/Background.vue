@@ -4,7 +4,7 @@
             <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column"
                 :style="{ '--last-width': lastWidth + 'px' }">
                 <div v-for="(row, i) in getRows" :key="i" class="c-background__row">
-                    <div class="c-background__block">{{ col}}</div>
+                    <div class="c-background__block"></div>
                 </div>
             </div>
         </div>
