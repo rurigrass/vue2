@@ -4,7 +4,7 @@
             <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column"
                 :style="{ '--last-width': lastWidth + 'px' }">
                 <div v-for="(row, i) in getRows" :key="i" class="c-background__row">
-                    <div class="c-background__block">{{ row}}</div>
+                    <div class="c-background__block">{{ col}}</div>
                 </div>
             </div>
         </div>
@@ -27,8 +27,6 @@ export default {
         getRows() {
             const blockSize = 40
             const amountOfBlocks = Math.ceil(this.dimensions.height / blockSize)
-            console.log("get them aall");
-            console.log(amountOfBlocks);
             return amountOfBlocks
         },
 
