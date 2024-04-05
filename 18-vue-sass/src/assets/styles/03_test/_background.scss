@@ -1,0 +1,29 @@
+// TEST
+
+.t-background {
+    display: flex;
+    height: 100vh; /* Ensure it takes up the full height of the viewport */
+    width: 100%; /* Ensure it takes up the full width of the viewport */
+    position: fixed; /* Ensure it's fixed in the viewport */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left side of the viewport */
+    z-index: 2; /* Set the z-index to ensure it's above other content */
+    
+    &__column {
+        width: 40px;
+        background-color: blue; /* Set the background color */
+        margin-right: 5px; /* Add some space between columns */
+        transition: opacity 0.5s; /* Apply transition to opacity property */
+        opacity: 0; /* Initially hide the columns */
+
+    }
+}
+
+
+.reveal-enter-active, .reveal-leave-active {
+    transition: opacity 0.5s;
+  }
+  
+  .reveal-enter, .reveal-leave-to {
+    opacity: 0;
+  }

@@ -7,7 +7,7 @@
 
   z-index: 2;
   pointer-events: none;
-  background-color: orange;
+  // background-color: orange;
 
   color: black;
 
@@ -44,16 +44,16 @@
   //   }
   // }
 
-  @for $i from 1 through 100 {
-    .c-background__column:nth-child(#{$i}) {
-      @for $j from 1 through 10 {
-        .c-background__row:nth-child(#{$j}) {
-          animation-delay: $j * (1s / 18);
-          background-color: aquamarine;
-        }
-      }
-    }
-  }
+  // @for $i from 1 through 100 {
+  //   .c-background__column:nth-child(#{$i}) {
+  //     @for $j from 1 through 10 {
+  //       .c-background__row:nth-child(#{$j}) {
+  //         animation-delay: $j * (1s / 18);
+  //         background-color: aquamarine;
+  //       }
+  //     }
+  //   }
+  // }
 
   &__block {
     // @for $i from 1 through 4 {
@@ -65,8 +65,17 @@
     // background-color: green;
     // height: 40px;
     // width: 40px;
+    z-index: 3;
+    background-color: greenyellow;
 
     height: 100%;
     width: 100%;
   }
+}
+
+.reveal-enter-active, .reveal-leave-active {
+  transition: opacity 1s;
+}
+.reveal-enter, .reveal-leave-to {
+  opacity: 0;
 }
