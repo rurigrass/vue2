@@ -1,5 +1,4 @@
 <template>
-    <!-- <transition name="fade"> -->
         <div class="c-background">
             <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column"
                 :style="{ '--last-width': lastWidth + 'px' }">
@@ -10,7 +9,6 @@
                 </div>
             </div>
         </div>
-    <!-- </transition> -->
 </template>
 
 
@@ -34,11 +32,6 @@ export default {
         },
 
     },
-    // updated() {
-    //     console.log("is it showinf? ", this.$store.state.menuOpen);
-
-    // }
-
 }
 </script>
 

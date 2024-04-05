@@ -2,69 +2,22 @@
   display: flex;
   flex-direction: row-reverse;
   height: 100dvh;
-  overflow: hidden;
   position: fixed;
-
   z-index: 2;
-  pointer-events: none;
-  // background-color: orange;
-
-  color: black;
 
   &__column {
     width: 40px;
-    // height: 40px;
     &:last-child {
       width: var(--last-width);
-      // background-color: yellow;
+      background-color: yellow;
     }
-
-    // &:nth-child() {
-    //   background-color: greenyellow;
-    // }
-    // &:nth-child(4) > div:nth-child(2){
-    //   background-color: purple;
-    // }
   }
 
   &__row {
     height: 40px;
-    // width: 40px;
-    // &:nth-child(4) > div:nth-child(2){
-    //   background-color: purple;
-    // }
   }
 
-  // @for $i from 1 through 100 {
-  //   &__column:nth-child( #{$i}) {
-  //     background-color: aqua;
-  //   }
-  //   &__row:nth-child( #{$i}) {
-  //     background-color: aqua;
-  //   }
-  // }
-
-  // @for $i from 1 through 100 {
-  //   .c-background__column:nth-child(#{$i}) {
-  //     @for $j from 1 through 10 {
-  //       .c-background__row:nth-child(#{$j}) {
-  //         animation-delay: $j * (1s / 18);
-  //         background-color: aquamarine;
-  //       }
-  //     }
-  //   }
-  // }
-
   &__block {
-    // @for $i from 1 through 4 {
-    //   &:nth-child( #{$i}) {
-    //     background-color: aqua;
-    //   }
-    // }
-
-    // background-color: green;
-    // height: 40px;
-    // width: 40px;
     z-index: 3;
     background-color: greenyellow;
 
