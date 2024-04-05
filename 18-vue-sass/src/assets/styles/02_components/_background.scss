@@ -16,7 +16,7 @@
     // height: 40px;
     &:last-child {
       width: var(--last-width);
-      background-color: yellow;
+      // background-color: yellow;
     }
 
     // &:nth-child() {
@@ -29,7 +29,7 @@
 
   &__row {
     height: 40px;
-    width: 40px;
+    // width: 40px;
     // &:nth-child(4) > div:nth-child(2){
     //   background-color: purple;
     // }
@@ -74,7 +74,7 @@
 }
 
 .reveal-enter-active, .reveal-leave-active {
-  transition: opacity 1s;
+  transition: opacity var(--delay);
 }
 .reveal-enter, .reveal-leave-to {
   opacity: 0;

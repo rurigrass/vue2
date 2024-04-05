@@ -5,7 +5,7 @@
                 :style="{ '--last-width': lastWidth + 'px' }">
                 <div v-for="(row, j) in getRows" :key="j" class="c-background__row">
                     <transition name="reveal">
-                        <div v-show="$store.state.menuOpen" class="c-background__block">{{ col + row }}</div>
+                        <div v-show="$store.state.menuOpen" class="c-background__block" :style="{ '--delay': (col + row) * 0.1 + 's'}"></div>
                     </transition>
                 </div>
             </div>
@@ -43,28 +43,4 @@ export default {
 </script>
 
 <style scoped>
-.t-background {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.t-background__column {
-    width: 40px;
-    background-color: blue;
-    margin-right: 5px;
-    opacity: 0;
-}
-
-.reveal-enter-active {
-    transition: opacity 0.5s;
-}
-
-.reveal-enter {
-    opacity: 1;
-}
 </style>
