@@ -4,6 +4,7 @@
   height: 100dvh;
   position: fixed;
   z-index: 2;
+  // pointer-events: none;
 
   &__column {
     width: 40px;
