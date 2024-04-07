@@ -16,14 +16,22 @@
 
   &__row {
     height: 40px;
+    transition: all 0.2s spring;
+
+    &:hover{
+      // mix-blend-mode: difference;
+      opacity: 1;
+      background-color: blue;
+    }
   }
 
   &__block {
-    z-index: 3;
+    // z-index: 3;
     background-color: greenyellow;
 
     height: 100%;
     width: 100%;
+
   }
 }
 
