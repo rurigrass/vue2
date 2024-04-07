@@ -4,7 +4,7 @@
                 :style="{ '--last-width': lastWidth + 'px' }">
                 <div v-for="(row, j) in getRows" :key="j" class="c-background__row">
                     <transition name="reveal">
-                        <div v-show="$store.state.menuOpen" class="c-background__block" :style="{ '--delay': (col + row) * 0.1 + 's'}"></div>
+                        <div v-show="$store.state.menuOpen" class="c-background__block" :style="{ '--delay': (col + row) * 0.05 + 's'}"></div>
                     </transition>
                 </div>
             </div>
