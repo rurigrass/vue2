@@ -16,17 +16,19 @@
 
   &__row {
     height: 40px;
-    transition: all 0.2s spring;
-
+    transition: background-color 2.1s ease-in;
+    
     &:hover{
-      // mix-blend-mode: difference;
+
+      transition: background-color 0.1s ;
       opacity: 1;
       background-color: blue;
     }
+
+
   }
 
   &__block {
-    // z-index: 3;
     background-color: greenyellow;
 
     height: 100%;
