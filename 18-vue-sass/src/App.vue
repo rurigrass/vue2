@@ -11,11 +11,16 @@
     <div :style="{ padding: '20px' }"></div>
     <div class="container">
       <ImageContainer class="container__left" link="/src/assets/sava-bobov.jpg" />
-      <InvertedText class="container__right container__mt text__sm" :text-fill="innerWidth / 6 - 5.5"
-      fill="__white-left"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem illum
-      aut dolore esse maiores ullam, fugiat temporibus aliquid alias itaque
-      nulla amet id deserunt natus expedita! Facere possimus sequi velit!
-    </InvertedText>
+      <div class="container__right container__mt">
+        <InvertedText class=" text__sm" :text-fill="innerWidth / 6 - 5.5"
+        fill="__white-left"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem illum
+        aut dolore esse maiores ullam, fugiat temporibus aliquid alias itaque
+        nulla amet id deserunt natus expedita! Facere possimus sequi velit!
+      </InvertedText>
+      <div :style="{'display': 'flex', 'justify-content': 'center'}" >
+        <Button>click me</Button>
+      </div>
+      </div>
   </div>
   </div>
 </template>
@@ -26,6 +31,7 @@ import ImageContainer from "./components/ImageContainer.vue";
 import InvertedText from "./components/InvertedText.vue";
 import Menu from "./components/Menu.vue";
 import Background from "./components/Background.vue";
+import Button from "./components/Button.vue";
 
 export default {
   components: {
@@ -34,6 +40,7 @@ export default {
     Background,
     InvertedText,
     ImageContainer,
+    Button
   },
 
   data() {
