@@ -1,9 +1,15 @@
 <template>
     <transition name="fade">
         <div class="c-menu">
-            <p>Home</p>
-            <p>About</p>
-            <p>Contact</p>
+            <router-link to="/">
+                <p>Home</p>
+            </router-link>
+            <router-link to="/about">
+                <p>About</p>
+            </router-link>
+            <router-link to="/contact">
+                <p>Contact</p>
+            </router-link>
         </div>
     </transition>
 </template>

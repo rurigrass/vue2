@@ -18,12 +18,14 @@
 
 a {
   font-weight: 500;
-  color: #42b983;
+  color: inherit;
+  // color: #42b983;s
   text-decoration: inherit;
 
   &:hover {
     cursor: pointer;
-    color: #535bf2;
+    color: inherit;
+    // color: #535bf2;
   }
 }
 
