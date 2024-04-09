@@ -1,6 +1,6 @@
 <template>
         <div class="c-background">
-            <div v-for="(col, i) in Math.ceil(screenWidth / 40)" :key="i" class="c-background__column"
+            <div v-for="(col, i) in Math.ceil(dimensions.width / 40)" :key="i" class="c-background__column"
                 :style="{ '--last-width': lastWidth + 'px' }">
                 <div v-for="(row, j) in getRows" :key="j" class="c-background__row">
                     <transition name="reveal">
@@ -15,13 +15,12 @@
 <script>
 export default {
     props: {
-        screenWidth: Number,
         dimensions: Object
     },
     computed: {  
         lastWidth() {
             let value
-            const remainder = (this.screenWidth / 40) % 1 * 40
+            const remainder = (this.dimensions.width / 40) % 1 * 40
             remainder === 0 ? value = 40 : value = remainder
             return value
         },

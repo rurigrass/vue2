@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <Menu v-show="$store.state.menuOpen"></Menu>
-    <Background :screenWidth="innerWidth" :dimensions="dimensions"></Background>
+    <Background :dimensions="dimensions"></Background>
     <div class="container">
       <InvertedText class="container__left container__center container__ml text__lg" :text-fill="innerWidth / 3 - 102"
       :extra="innerWidth" fill="__black-left">Cascade</InvertedText>
