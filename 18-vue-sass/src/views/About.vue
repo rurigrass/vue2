@@ -1,16 +1,23 @@
 <template>
-    <div>
-about
+    <div :style="{'margin-left': '100px'}">
+        <!-- {{ dimensions.height }} -->
     </div>
 </template>
 
 <script>
-    export default {
-        
+// import { useDimensions } from "../utils.ts"
+export default {
+    data() {
+    return {
+    //   dimensions: useDimensions()
     }
+  },
+
+
+
+
+
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
-
+<style lang="scss" scoped></style>

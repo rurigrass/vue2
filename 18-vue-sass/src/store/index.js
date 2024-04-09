@@ -20,6 +20,8 @@ export const store = new Vuex.Store({
   getters: {},
 
   modules: {},
+
+
 });
 
 export default store;
