@@ -14,6 +14,7 @@ export const router = new Router({
         { path: '/about', name: "about", component: About },
         { path: '/contact', name: "contact", component: Contact }
     ]
+    
 });
 
 export default router

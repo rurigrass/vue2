@@ -19,6 +19,7 @@ export default {
     },
     computed: {  
         lastWidth() {
+            console.log("Width ", this.dimensions);
             let value
             const remainder = (this.dimensions.width / 40) % 1 * 40
             remainder === 0 ? value = 40 : value = remainder

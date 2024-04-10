@@ -13,6 +13,9 @@ export const store = new Vuex.Store({
     toggleMenu(state) {
       state.menuOpen = !state.menuOpen;
     },
+    closeMenu(state) {
+      state.menuOpen = false
+    }
   },
 
   actions: {},

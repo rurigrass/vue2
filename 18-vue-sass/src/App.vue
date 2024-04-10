@@ -26,6 +26,11 @@ export default {
   },
   destroyed() {
     window.removeEventListener('resize', this.getDimensions);
+  },
+  watch: {
+    $route (to, from){
+      this.$store.commit('closeMenu')
+        }
   }
 };
 </script>
