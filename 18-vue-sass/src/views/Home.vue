@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <InvertedText class="container__left container__center container__ml text__lg"
-                :text-fill="dimensions.width / 3 - 102" :extra="dimensions.width" fill="__black-left">Cascade
+                :text-fill="dimensions.page.width / 3 - 102" :extra="dimensions.page.width" fill="__black-left">Cascade
             </InvertedText>
             <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg" />
         </div>
@@ -10,7 +10,7 @@
         <div class="container">
             <ImageContainer class="container__left" link="/src/assets/sava-bobov.jpg" />
             <div class="container__right container__mt">
-                <InvertedText class=" text__sm" :text-fill="dimensions.width / 6 - 5.5" fill="__white-left"> Lorem,
+                <InvertedText class=" text__sm" :text-fill="dimensions.page.width / 6 - 5.5" fill="__white-left"> Lorem,
                     ipsum
                     dolor sit amet consectetur adipisicing elit. Quidem illum
                     aut dolore esse maiores ullam, fugiat temporibus aliquid alias itaque

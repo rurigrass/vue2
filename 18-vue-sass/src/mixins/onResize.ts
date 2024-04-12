@@ -5,20 +5,32 @@ export const onResizeMixin = {
   data() {
     return {
       dimensions: {
-        height: 0,
-        width: 0,
-        pageHeight: 0,
-        pageWidth: 0
+        screen: {
+          height: 0,
+          width: 0,
+        },
+        page: {
+          height: 0,
+          width: 0,
+        },
       },
     };
   },
   methods: {
     getDimensions() {
-      this.dimensions.height = window.innerHeight;
-      this.dimensions.width = Math.min(window.innerWidth, 1280);
-      // this.dimensions.height = Math.min(window.innerWidth, 1280) : this.dimensions.width = window.innerWidth
-      this.dimensions.pageHeight = this.dimensions.width;
+      const body = document.body;
+      const html = document.documentElement;
+  
+      this.dimensions.page.height = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+      this.dimensions.page.width = Math.min(window.innerWidth, 1280);
+      this.dimensions.screen.height = window.innerHeight;
+      this.dimensions.screen.width = window.innerWidth;
     },
   },
 };
-
