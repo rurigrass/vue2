@@ -1,19 +1,19 @@
 <template>
     <div :style="{'margin-left': '100px'}">
-        {{ dimensions.height }}
-        {{ dimensions.width }}
+        {{ pageHeight }}
+        {{ pageWidth }}
     </div>
 </template>
 
 <script>
-import {onResizeMixin} from "../mixins/onResize.ts"
+import {pageDimensionsMixin} from "../mixins/pageDimensions.ts"
 export default {
-    mixins: [onResizeMixin],
+    mixins: [pageDimensionsMixin],
     created() {
-      window.addEventListener('resize', this.getDimensions);
+      window.addEventListener('resize', this.getPageDimensions);
     },
     destroyed() {
-      window.removeEventListener('resize', this.getDimensions);
+      window.removeEventListener('resize', this.getPageDimensions);
     }
 
 

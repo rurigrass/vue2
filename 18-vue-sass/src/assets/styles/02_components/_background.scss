@@ -1,54 +1,33 @@
 .c-background {
   display: flex;
   flex-direction: row-reverse;
-  height: 100dvh;
-  position: fixed;
+  height: var(--page-height);
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
-  // pointer-events: none;
 
   &__column {
     width: 40px;
-    &:last-child {
-      width: var(--last-width);
-      background-color: yellow;
-    }
+    // &:last-child {
+    //   width: var(--last-width);
+    //   background-color: yellow;
+    // }
   }
 
   &__row {
     height: 40px;
-    transition: background-color 2.1s ease-in;
-    
-    &:hover{
-
-      transition: background-color 0.1s ;
-      opacity: 1;
-      background-color: blue;
-    }
-
-
   }
 
   &__block {
-    background-color: greenyellow;
-
+    // background-color: greenyellow;
     height: 100%;
     width: 100%;
 
-    // transition: background-color 2.1s ease-in;
-    
-    // &:hover{
-
-    //   transition: background-color 0.1s ;
-    //   opacity: 1;
-    //   background-color: blue;
-    // }
-
+    &:hover {
+      transition: background-color 0.1s;
+      opacity: 1;
+      background-color: blue;
+    }
   }
-}
-
-.reveal-enter-active, .reveal-leave-active {
-  transition: opacity var(--delay) 0.1s;
-}
-.reveal-enter, .reveal-leave-to {
-  opacity: 0;
 }

@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <InvertedText class="container__left container__center container__ml text__lg"
-                :text-fill="dimensions.page.width / 3 - 102" :extra="dimensions.page.width" fill="__black-left">Cascade
+                :text-fill="pageWidth / 3 - 102" :extra="pageWidth" fill="__black-left">Cascade
             </InvertedText>
             <ImageContainer class="container__right" link="/src/assets/dmitriy-galanov.jpg" />
         </div>
@@ -10,7 +10,7 @@
         <div class="container">
             <ImageContainer class="container__left" link="/src/assets/sava-bobov.jpg" />
             <div class="container__right container__mt">
-                <InvertedText class=" text__sm" :text-fill="dimensions.page.width / 6 - 5.5" fill="__white-left"> Lorem,
+                <InvertedText class=" text__sm" :text-fill="pageWidth / 6 - 5.5" fill="__white-left"> Lorem,
                     ipsum
                     dolor sit amet consectetur adipisicing elit. Quidem illum
                     aut dolore esse maiores ullam, fugiat temporibus aliquid alias itaque
@@ -28,7 +28,7 @@
 import ImageContainer from "../components/ImageContainer.vue";
 import InvertedText from "../components/InvertedText.vue";
 import Button from "../components/Button.vue";
-import { onResizeMixin } from "../mixins/onResize.ts"
+import { pageDimensionsMixin } from "../mixins/pageDimensions.ts"
 
 export default {
     components: {
@@ -37,12 +37,12 @@ export default {
         Button
     },
 
-    mixins: [onResizeMixin],
+    mixins: [pageDimensionsMixin],
     created() {
-        window.addEventListener('resize', this.getDimensions);
+        window.addEventListener('resize', this.getPageDimensions);
     },
     destroyed() {
-        window.removeEventListener('resize', this.getDimensions);
+        window.removeEventListener('resize', this.getPageDimensions);
     }
 
 }
