@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Background :screenDimensions="{screenHeight, screenWidth}" :pageDimensions="{pageHeight, pageWidth}"></Background>
-    <Cover :screenDimensions="{screenHeight, screenWidth}" :pageDimensions="{pageHeight, pageWidth}"></Cover>
+    <Background :screenDimensions="{ screenHeight, screenWidth }" :pageDimensions="{ pageHeight, pageWidth }"></Background>
+    <Cover :screenDimensions="{ screenHeight, screenWidth }" :pageDimensions="{ pageHeight, pageWidth }"></Cover>
     <Menu v-show="$store.state.menuOpen"></Menu>
     <router-view />
   </div>
@@ -25,7 +25,7 @@ export default {
   },
 
   mixins: [pageDimensionsMixin, screenDimensionsMixin],
-  
+
   created() {
     window.addEventListener('resize', this.getPageDimensions);
     window.addEventListener('resize', this.getScreenDimensions);
@@ -35,9 +35,9 @@ export default {
     window.removeEventListener('resize', this.getScreenDimensions);
   },
   watch: {
-    $route (to, from){
+    $route(to, from) {
       this.$store.commit('closeMenu')
-        }
+    }
   }
 };
 </script>

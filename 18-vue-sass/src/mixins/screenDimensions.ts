@@ -12,7 +12,6 @@ export const screenDimensionsMixin = {
       getScreenDimensions() {
         this.screenHeight = window.innerHeight;
         this.screenWidth = window.innerWidth;
-        console.log("ScreenDimensionMIXIN ", this.screenHeight, this.screenWidth);
       }
        
 

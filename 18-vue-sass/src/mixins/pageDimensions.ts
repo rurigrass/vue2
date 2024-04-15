@@ -1,7 +1,8 @@
 export const pageDimensionsMixin = {
   created() {
-    this.getPageDimensions();
+    this.getPageDimensions();    
   },
+
   data() {
     return {
       pageHeight: 0,
@@ -11,7 +12,7 @@ export const pageDimensionsMixin = {
   methods: {
     getPageDimensions() {
       const body = document.body;
-      const html = document.documentElement
+      const html = document.documentElement;
 
       this.pageHeight = Math.max(
         body.scrollHeight,
@@ -21,9 +22,6 @@ export const pageDimensionsMixin = {
         html.offsetHeight
       );
       this.pageWidth = Math.min(window.innerWidth, 1280);
-     
-
-      console.log("PageDimensionMIXIN ", this.pageHeight, this.pageWidth);
     },
   },
 };

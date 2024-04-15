@@ -1,6 +1,6 @@
 <template>
         <transition name="fade" >
-            <button v-show="!$store.state.menuOpen" class="button">
+            <button  class="button">
                 <router-link to="/about">
                     <slot></slot>
                 </router-link>

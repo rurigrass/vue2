@@ -38,13 +38,13 @@ export default {
     },
 
     mixins: [pageDimensionsMixin],
+
     created() {
         window.addEventListener('resize', this.getPageDimensions);
     },
     destroyed() {
         window.removeEventListener('resize', this.getPageDimensions);
     }
-
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="c-background" :style="{ '--page-height': pageDimensions.pageHeight + 'px' }">
+    <div class="c-background" :style="{ '--page-height': pageHeight + 'px' }">
         <div v-for="(col, i) in Math.ceil(screenDimensions.screenWidth / 40)" :key="i" class="c-background__column"
             :style="{ '--last-width': lastWidth + 'px' }">
             <div v-for="(row, j) in getRows" :key="j" class="c-background__row">
@@ -15,6 +15,11 @@ export default {
         screenDimensions: Object,
         pageDimensions: Object,
     },
+    data() {
+        return {
+            pageHeight: 0,
+        }
+    },
     computed: {
         lastWidth() {
             let value
@@ -27,8 +32,11 @@ export default {
             const amountOfBlocks = Math.ceil(this.pageDimensions.pageHeight / blockSize)
             return amountOfBlocks
         },
-
     },
+    updated() {
+        this.pageHeight = this.pageDimensions.pageHeight
+        console.log("THE HEIGHT", this.pageDimensions.pageHeight);
+    }
 }
 </script>
 
