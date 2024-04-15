@@ -17,7 +17,7 @@
                     nulla amet id deserunt natus expedita! Facere possimus sequi velit!
                 </InvertedText>
                 <div :style="{ 'display': 'flex', 'justify-content': 'center' }">
-                    <Button link="about">click me</Button>
+                    <Button link="about">About</Button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <template>
         <transition name="fade" >
             <button  class="button">
-                <router-link to="/about">
+                <router-link :to="link">
                     <slot></slot>
                 </router-link>
                 </button>

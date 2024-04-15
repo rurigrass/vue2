@@ -1,10 +1,16 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Background :screenDimensions="{ screenHeight, screenWidth }" :pageDimensions="{ pageHeight, pageWidth }"></Background>
+    <Background :screenDimensions="{ screenHeight, screenWidth }" :pageDimensions="{ pageHeight, pageWidth }">
+    </Background>
     <Cover :screenDimensions="{ screenHeight, screenWidth }" :pageDimensions="{ pageHeight, pageWidth }"></Cover>
     <Menu v-show="$store.state.menuOpen"></Menu>
-    <router-view />
+
+    <transition name="fade" mode="out-in">
+    <router-view>
+        <!-- <component :is="Component" /> -->
+      </router-view>
+    </transition>
   </div>
 </template>
 
