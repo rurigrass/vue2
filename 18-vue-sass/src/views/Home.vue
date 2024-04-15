@@ -9,7 +9,7 @@
         <div :style="{ padding: '20px' }"></div>
         <div class="container">
             <ImageContainer class="container__left" link="/src/assets/sava-bobov.jpg" />
-            <div class="container__right container__mt">
+            <div v-scrollAnimation class="container__right container__mt">
                 <InvertedText class=" text__sm" :text-fill="pageWidth / 6 - 5.5" fill="__white-left"> Lorem,
                     ipsum
                     dolor sit amet consectetur adipisicing elit. Quidem illum
@@ -48,4 +48,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.before-enter {
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+
+.enter {
+    opacity: 1;
+}
+</style>
